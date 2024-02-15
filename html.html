@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+                <style>
+        .red{
+            background-color: red;
+        }
+        .green{
+            background-color: green;
+        }
+        .blue{
+            background-color: blue;
+        }
+        .pink{
+            color: pink;
+        }
+        .teal{
+            color: teal;
+        }
+        .purple{
+            color: purple;
+        }
+                </style>
+</head>
+<body>
+<div class="container">
+   <div class="content">
+     <p> Lorem ipsum dolor sit amet, consectetur a
+         dipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor neque
+         vitae tempus quam pellentesque nec nam aliquam sem. Lacus sed turpis tincidunt id aliquet risus. Ut ornare lectus sit amet est placerat in
+         egestas erat. Non nisi est sit amet facilisis magna etiam tempor orci. Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Bibendum ut tristique et egestas quis ipsum suspendisse ultrices. Non blandit massa enim nec dui nunc mattis enim ut. Massa sapien faucibus et molestie ac feugiat. Placerat duis ultricies lacus sed turpis tincidunt id aliquet risus. </p>
+            <div class="row">
+    <h3>Background</h3>
+          <button id="1">RED</button>
+          <button id="2">GREED</button>
+          <button id="3">BLUE</button>
+</div>
+        <div class="row">
+        <h3>Text</h3>
+        <button id="4">PINK</button>
+        <button id="5">TEAL</button>
+        <button id="6">PURPLE</button>
+        </div>
+            <button id="clear">CLEAR</button>
+   </div>
+</div>
+<script>
+    const content =document.querySelector('.content');
+    const red =document.getElementById('1');
+    const greed = document.getElementById('2');
+    const blue = document.getElementById('3');
+
+    const pink = document.getElementById('4');
+    const teal = document.getElementById('5');
+    const purple = document.getElementById('6');
+
+    const clearbutton = document.getElementById('clear');
+
+red.addEventListener('click', function (e){
+    removeBgcolor();
+    content.classList.add('red');
+});
+
+greed.addEventListener('click', function (e){
+    removeBgcolor();
+    content.classList.add('red');
+});
+
+blue.addEventListener('click',function (e){
+    removeBgcolor();
+    content.classList.add('blue');
+});
+
+pink.addEventListener('click',function (e){
+     removeBgcolor();
+     content.classList.add('pink');
+});
+
+teal.addEventListener('click',function (e){
+     removeBgcolor();
+     content.classList.add('teal');
+    });
+
+purple.addEventListener('click', function (e){
+    removeBgcolor();
+    content.classList.add('purple')
+})
+
+    clearbutton.addEventListener('click', function (e){
+        removeTextColor();
+        removeBgcolor();
+    });
+
+function removeBgcolor(){}
+
+
+
+
+
+
+
+
+
+
+
+
+    function removeBgcolor(){
+    content.classList.remove('red');
+    content.classList.remove('green');
+    content.classList.remove('blue');
+}
+    function removeTextColor(){
+            content.classList.remove('pink');
+            content.classList.remove('teal');
+            content.classList.remove('purple');
+    }
+</script>
+</body>
+</html>
